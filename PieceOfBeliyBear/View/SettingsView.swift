@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.colorScheme) var colorScheme
+    @Binding var titleOn: Bool
     @State private var notificationsEnabled = false
     @State private var selectedGender = "Male".localized
     @State private var selectedAge = 19.0
@@ -16,9 +18,20 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Notifications".localized)) {
+                Section(header: Text("General".localized)) {
                     Toggle(isOn: $notificationsEnabled) {
                         Text("Push Notifications".localized)
+                    }
+                    Toggle(isOn: $titleOn){
+                        Text("Show title".localized)
+                    }
+                        if titleOn{
+                            Text("Navigation title enabled".localized)
+                    }
+                    HStack {
+                        Spacer()
+                        Text(colorScheme == .dark ? "Dark Theme enabled".localized : "Light Theme enabled".localized)
+                        Spacer()
                     }
                 }
                 
@@ -38,8 +51,4 @@ struct SettingsView: View {
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-    }
-}
+

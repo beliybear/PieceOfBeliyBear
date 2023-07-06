@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InfoView: View {
+    @Binding var titleOn: Bool
+    
     var body: some View {
         VStack{
             NavigationView {
@@ -16,14 +18,9 @@ struct InfoView: View {
                         InfoRow(post: post)
                     }
                 }
-                .navigationTitle("My Projects".localized)
+                .navigationTitle(titleOn ? "My Projects".localized : "")
             }
         }
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        InfoView()
-    }
-}
