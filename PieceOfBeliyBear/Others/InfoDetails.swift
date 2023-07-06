@@ -18,6 +18,7 @@ struct InfoDetails: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 200, height: 200)
+                    .padding(.bottom)
                 Text(post.title)
                     .font(.title)
                     .padding(.top)
@@ -26,6 +27,6 @@ struct InfoDetails: View {
             }
         }
         .navigationTitle(post.title)
-        .foregroundStyle(.background)
+        .foregroundStyle(.black)
     }
 }
