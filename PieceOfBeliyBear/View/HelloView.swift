@@ -12,7 +12,3 @@ struct HelloView: View {
         Text("Hello, World!".localized)
     }
 }
-
-#Preview {
-    HelloView()
-}
