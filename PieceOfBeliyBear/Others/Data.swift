@@ -28,5 +28,10 @@ let postData: [Post] = [
     Post(title: "Small Social Network".localized,
          description: "".localized,
          image: Image("Social"),
-         link: "https://github.com/beliybear/iOS-DT-Homework")
+         link: "https://github.com/beliybear/iOS-DT-Homework"),
+    
+    Post(title: "Contact".localized,
+         description: "The Contact app is a unique tool for both learning and entertainment. With just a click of a button, the user is provided with a random word in Russian. This word can be used for guessing games or to enhance your vocabulary. \nContact is perfect for those who want to make the learning process more interactive and engaging. Give it a try and see for yourself!".localized,
+         image: Image("Contact"),
+         link: "")
 ]
