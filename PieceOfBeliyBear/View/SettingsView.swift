@@ -41,6 +41,7 @@ struct SettingsView: View {
                             Text($0)
                         }
                     }
+                    .pickerStyle(.segmented)
                     Slider(value: $selectedAge, in: 1...100, step: 1) {
                         Text("Age".localized)
                     }
