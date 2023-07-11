@@ -15,3 +15,9 @@ struct Post: Identifiable {
     var link: String
     var id = UUID()
 }
+
+struct About: Identifiable {
+    var title: String
+    var description: String
+    var id = UUID()
+}
