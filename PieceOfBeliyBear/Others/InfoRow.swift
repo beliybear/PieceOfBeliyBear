@@ -1,22 +1,24 @@
 //
 //  InfoRow.swift
-//  PieceOfCinema
+//  PieceOfBeliyBear
 //
-//  Created by Beliy.Bear on 06.07.2023.
+//  Created by Beliy.Bear on 11.07.2023.
 //
 
 import Foundation
 import SwiftUI
 
 struct InfoRow: View {
-    var post: Post
+    var about: About
 
     var body: some View {
-        HStack {
-            post.image
-                .resizable()
-                .frame(width: 50, height: 50)
-            Text(post.title)
+        VStack {
+            Text(about.title)
+                .fontWeight(.bold)
         }
     }
+}
+
+#Preview {
+    ProfileView()
 }

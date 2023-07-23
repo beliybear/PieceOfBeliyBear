@@ -8,21 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("titleOn") private var titleOn = false
     
     var body: some View {
         TabView {
-            InfoView(titleOn: $titleOn)
+            InfoView()
                 .tabItem {
                     Label("Info".localized, systemImage: "list.dash")
                 }
             
-            HelloView()
+            ProfileView()
                 .tabItem {
-                    Label("Hello".localized, systemImage: "bin.xmark")
+                    Label("Profile".localized, systemImage: "person.crop.circle")
                 }
             
-            SettingsView(titleOn: $titleOn)
+            SettingsView()
                 .tabItem {
                     Label("Settings".localized, systemImage: "gearshape")
                 }
